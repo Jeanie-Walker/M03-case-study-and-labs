@@ -43,16 +43,15 @@ class Automobile(Vehicle):
 
 
 def user_input(prompt, valid):
-    """Input validation for roof/doors"""
     while True:
         answer = input(prompt).strip().lower()
         if answer in valid:
             return answer
-        print(f"Please enter one of: {', '.join(valid)}")
+        print(f"Please enter one of the two options as shown: {', '.join(valid)}")
 
 
 def main():
-    print("Enter the car's information.\n")
+    print("Enter the following information about your car.\n")
 
     year = input("Year: ").strip()
     make = input("Make: ").strip().title()
